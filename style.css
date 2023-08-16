@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'PocketMonk';
+  src: url('./fonts/pocket-monk.otf');
+}
+
+body {
+  font-family: 'PocketMonk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.header {
+  height: 72px;
+  background: darkmagenta;
+  color: white;
+}
+
+.footer {
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+}
+
+.search-bar * {
+  font-size: xx-large;
+  font-family: 'PocketMonk'
+}
+
+.detailed-info {
+  width: 300px;
+  background: royalblue;
+  box-sizing: border-box;
+}
+
+.card {
+  border: 1px solid #eee;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 4px;
+}
+
+/* Alignments */
+/* Header footer and body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 16px;
+  font-size: 32px;
+  font-weight: 900;
+  justify-content: center;
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  justify-content: center;
+}
+
+/* ############################### */
+/* ######## Home Page ############ */
+/* ############################### */
+
+.search-bar {
+  margin: auto;
+  padding: 32px;
+}
+
+.sorting-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: larger;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.show-more-link{
+  padding: 8px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.show-more-link a {
+  text-decoration: none;
+}
+
+.detailed-info {
+  align-self: stretch;
+  width: 300px;
+  padding: 16px;
+  display: none;
+}
+
+.detailed-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailed-info a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+}
+
+.card {
+  padding: 32px;
+  margin: 32px;
+  text-decoration: none;
+}
+
+.card-name {
+  font-size: x-large;
+}
+
+.card-id {
+  font-size: larger;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+}
+
+.card-type {
+  display: flex;
+  justify-content: space-around;
+  align-self: stretch;
+  margin: 12px;
+}
+
+.card-type img {
+  height: 26px;
+  width: 26px;
+}
+
+/* ############################### */
+/* ######### Detail View ######### */
+/* ############################### */
+.arrows {
+  display: flex;
+  font-size: larger;
+  justify-content: space-evenly;
+}
+
+.detail-container {
+  display: flex;
+}
+
+.detail-container .avatar {
+  width: 300px;
+  flex: 1 0 auto;
+  max-width: 400px;
+}
+
+.avatar > * {
+  margin: 12px;
+}
+
+.avatar figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.types-container .con-header,
+.weaknesses-container .con-header {
+  text-align: center;
+}
+
+.types-container .types,
+.weaknesses-container .weaknesses{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.weakness {
+  margin: 12px;
+}
+
+.avatar figure img {
+  width: 200px;
+  height: 200px;
+}
+
+.avatar figcaption,
+.avatar .con-header {
+  font-size: 32px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info-container {
+  margin: 20px;
+  border-radius: 4px;
+}
+
+.info-container > .con-header {
+  font-size: xx-large;
+}
+
+.info-container > :last-child {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: x-large;
+  justify-content: center;
+}
+
+.info-container > :last-child > * {
+  margin: 8px;
+  border: 1px solid #eee;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  padding: 8px;
+}
