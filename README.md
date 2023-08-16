@@ -1,5 +1,7 @@
 # Pokedex API
 
+![](preview.png)
+
 To use this api, download the repository and simply load `index.html` to your chrome browser.
 
 The API supports the following actions:
