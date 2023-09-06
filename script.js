@@ -225,7 +225,10 @@ bottomLink.addEventListener('click', async (event) => {
 let form = document.querySelector('form');
 let searchInput = document.getElementById('search-input');
 
-form.addEventListener("submit", searchCallback);
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await searchCallback(event);
+});
 
 let nameSortButton = document.querySelector('.name-sort');
 nameSortButton.addEventListener('click', sortByNameCallback);
