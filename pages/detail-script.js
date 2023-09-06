@@ -88,11 +88,19 @@ async function renderDetail() {
         for (const d of typeData.damage_relations.half_damage_to) {
             weaknesses.add(d.name);
         }
+    }
+    for (const type of pokeData.types) {
+        let typeQuery = new Request(`${type.type.url}`);
+        let typeData = await (await fetch(typeQuery)).json();
 
         // Remove double-damage-to
         for (const d of typeData.damage_relations.double_damage_to) {
             weaknesses.delete(d.name);
         }
+    }
+    for (const type of pokeData.types) {
+        let typeQuery = new Request(`${type.type.url}`);
+        let typeData = await (await fetch(typeQuery)).json();
 
         // Add no-damage-to
         for (const d of typeData.damage_relations.no_damage_to) {
